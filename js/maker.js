@@ -5,13 +5,20 @@ $("#input-generate").click(function () {
 	var firstName = $("#input-first-name").val();
 	var lastName = $("#input-last-name").val();
 	
-	var firstElem = findElement(firstName);
-	var lastElem = findElement(lastName);
-	console.log("-- NAME");
-	console.log(firstElem);
-	console.log(lastElem);
+	var firstList = findElement(firstName);
+	var lastList = findElement(lastName);
 	
-	if(firstElem && lastElem) {
+	if(firstList && lastList) {
+		
+		var firstElem = firstList[0];
+		var lastElem = lastList[0];
+		
+		var firstIndex = firstList[1];
+		var lastIndex = lastList[1];
+		
+		console.log("---NEW NAME---");
+		console.log(firstList);
+		console.log(lastList);
 		
 		$("#bb-body").attr("style", "");
 		$("#bb-name").html("");
@@ -25,7 +32,7 @@ $("#input-generate").click(function () {
 				"<div class='desc' role='bottom-left-2'>" + firstElem.electronic_configuration + "</div>" +
 			"</span>" +
 			"<span class='title-1'>" +
-			 "<div class='chemical-element-out'>" + firstName.substr(firstElem.symbol.length) + "</div>" +
+			 "<div class='chemical-element-out'>" + firstName.substr(firstIndex + firstElem.symbol.length) + "</div>" +
 			"</span>" +
 			"<br>" +
 			"<span class='chemical-element' style='text-align:center;'>" +
@@ -66,19 +73,24 @@ function oxidationStates(pElem) {
 }
 
 function findElement(pName) {
-	// First Try 2 Letters
-	for(var element in periodicTable) {
 	
-		if(pName.substr(0, 2).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
-			return periodicTable[element];
+	var i;
+	
+	// First Try 2 Letters
+	for(i = 0; i < (pName.length - 2); i++) {
+		for(var element in periodicTable) {
+				if(pName.substr(i, 2).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
+					return [periodicTable[element], i];
+				}
 		}
 	}
 	
 	// Then 1 Letter 
-	for(var element in periodicTable) {
-	
-		if(pName.substr(0, 1).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
-			return periodicTable[element];
+	for(i = 0; i < (pName.length - 2); i++) {
+		for(var element in periodicTable) {
+			if(pName.substr(i, 1).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
+				return [periodicTable[element], i];
+			}
 		}
 	}
 	
