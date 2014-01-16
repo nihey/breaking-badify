@@ -1,4 +1,3 @@
-audio.pause();
 
 $("#input-generate").click(function () {
 

@@ -28,9 +28,18 @@ var audio = $('audio').get(0),
     _playing = $('svg[role="playing"]');
 
 audio.src = Modernizr.audio.ogg ? 
-  'audio/breaking_bad_intro.ogg' : 
+  'audio/breaking_bad_intro.ogg': 
   'audio/breaking_bad_intro.mp3';
-audio.loop = true;
+var ended = false;
+audio.addEventListener('ended',function(){
+    if(ended === false){
+        audio.src = Modernizr.audio.ogg ? 
+      'audio/bb-long.ogg': 
+      'audio/bb-long.mp3';
+        audio.loop = true;
+        audio.play();
+    }
+});
 
 _paused.click(function() {
   $(this).css('display', 'none');
@@ -42,6 +51,7 @@ _playing.click(function() {
   $(this).css('display', 'none');
   _paused.css('display', 'block');
   audio.pause();
+  audio.currentTime = 0;
 });
 
 // Set to start
@@ -113,7 +123,6 @@ function init() {
     smoke_3.init(.222, .553, 90, img_smoke_3);
 
     requestAnimFrame(render);
-    audio.play();
 }
 
 function ParticleEmitter() {
