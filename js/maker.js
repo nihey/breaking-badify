@@ -4,6 +4,35 @@ $("#input-generate").click(function () {
 
 	var firstName = $("#input-first-name").val();
 	var lastName = $("#input-last-name").val();
+});
+
+
+$("#input-generate").click(function () {
+
+	var firstName = $("#input-first-name").val();
+	var lastName = $("#input-last-name").val();
+	location.search = "?firstName=" + firstName + "&lastName="+lastName;
+
+});
+
+$(document).ready(function(){
+		console.log("onload");
+	var f = getURLParameter("firstName");
+	var l = getURLParameter("lastName");
+	if(f !== 'null' && l !== 'null'){
+		$("#input-first-name").val(f);
+		$("#input-last-name").val(l);
+		breakingBadfy(f, l);
+	}
+});
+
+function getURLParameter(name) {
+    return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+    );
+}
+
+function breakingBadfy(firstName, lastName){
 	
 	var firstList = findElement(firstName);
 	var lastList = findElement(lastName);
@@ -49,7 +78,7 @@ $("#input-generate").click(function () {
 			"</span>").appendTo($("#bb-name"));
 		audio.play();
 	}
-});
+}
 
 function oxidationStates(pElem) {
 	var str = pElem.oxidation_states;
