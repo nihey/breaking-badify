@@ -7,13 +7,12 @@ $("#input-generate").click(function () {
 });
 
 $("#input-collapse").click(function() {
-	console.log("HOZ");
 	if($("#input-collapse").html() == "Close") {
-		$("#input-group-collapsible").attr("style","display:none;");
+		$("#input-group-collapsible").attr("style","height: 0px");
 		$("#input-collapse").html("Open");
 	}
 	else {
-		$("#input-group-collapsible").attr("style","");
+		$("#input-group-collapsible").attr("style","height: 120px");
 		$("#input-collapse").html("Close");
 	}
 });

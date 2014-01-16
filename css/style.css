@@ -10,10 +10,11 @@
 }
 
 .collapsible {
-  transition: height 0.2s;
-    -moz-transition: height 0.2s; /* Firefox 4 */
-    -webkit-transition: height 0.2s; /* Safari and Chrome */
-    -o-transition: height 0.2s; /* Opera */
+  overflow: hidden;
+  transition: height 1s;
+    -moz-transition: height 1s; /* Firefox 4 */
+    -webkit-transition: height 1s; /* Safari and Chrome */
+    -o-transition: height 1s; /* Opera */
 }
 
 .breakingbadbutton {
