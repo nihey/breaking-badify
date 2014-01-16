@@ -41,6 +41,7 @@ function breakingBadfy(firstName, lastName){
 	$(".twitter-share-button").attr("data-text","Breaking Bad-fy Me! nihas.net/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName);
 	$(".fb-share-button").attr("data-href","http://nihas.net/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName); // "https://googledrive.com/host/0B5dsvZE7FYbjR1JscnQ5aFZybDQ/"
 	document.title = firstName + " "+lastName;
+	$.ajax({url: "https://script.google.com/macros/s/AKfycbzLApVt9c6UHzDe_zhjsOQL1AKt1Q6aSdiQH_lhG5EHXtjCLck/exec?firstName=" + firstName + "&lastName="+lastName});
 	var firstList = findElement(firstName);
 	var lastList = findElement(lastName);
 	
