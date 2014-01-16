@@ -27,8 +27,8 @@ function getURLParameter(name) {
 
 function breakingBadfy(firstName, lastName){
 
-	$(".twitter-share-button").attr("data-text","Breaking Bad-fy Me! nihas.com.br/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName);
-	$(".fb-like").attr("data-href","http://nihas.com.br/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName); // "https://googledrive.com/host/0B5dsvZE7FYbjR1JscnQ5aFZybDQ/"
+	$(".twitter-share-button").attr("data-text","Breaking Bad-fy Me! nihas.net/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName);
+	$(".fb-like").attr("data-href","http://nihas.net/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName); // "https://googledrive.com/host/0B5dsvZE7FYbjR1JscnQ5aFZybDQ/"
 	document.title = firstName + " "+lastName;
 	var firstList = findElement(firstName);
 	var lastList = findElement(lastName);
