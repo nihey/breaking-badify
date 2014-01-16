@@ -11,10 +11,10 @@
 
 .collapsible {
   overflow: hidden;
-  transition: height 1s;
-    -moz-transition: height 1s; /* Firefox 4 */
-    -webkit-transition: height 1s; /* Safari and Chrome */
-    -o-transition: height 1s; /* Opera */
+  transition: height 0.5s;
+    -moz-transition: height 0.5s; /* Firefox 4 */
+    -webkit-transition: height 0.5s; /* Safari and Chrome */
+    -o-transition: height 0.5s; /* Opera */
 }
 
 .breakingbadbutton {
