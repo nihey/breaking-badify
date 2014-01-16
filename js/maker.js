@@ -12,7 +12,7 @@ $("#input-collapse").click(function() {
 		$("#input-collapse").html("Open");
 	}
 	else {
-		$("#input-group-collapsible").attr("style","height: 180px");
+		$("#input-group-collapsible").attr("style","height: 194px");
 		$("#input-collapse").html("Close");
 	}
 });

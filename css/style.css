@@ -9,6 +9,16 @@
   margin-left: 17px;
 }
 
+input[type="text"] {
+
+	margin-bottom: 4px;
+}
+
+.container {
+	margin-top: 7px;
+	margin-left: 7px;
+}
+
 .collapsible {
   overflow: hidden;
   transition: height 0.5s;
