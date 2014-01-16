@@ -9,6 +9,11 @@
   margin-left: 17px;
 }
 
+#input-collapse {
+	border: 1px solid #DDFFE2;
+	background: linear-gradient(0deg, #5cbe73 1%, #182b04 100%);
+}
+
 input[type="text"] {
 
 	margin-bottom: 4px;
