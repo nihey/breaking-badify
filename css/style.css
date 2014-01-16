@@ -12,6 +12,13 @@
 input[type="text"] {
 
 	margin-bottom: 4px;
+	width: 169px;
+	height: 25px;
+	font-size: 11px;
+	color: #c7c7c7;
+	border: 1px solid #c7c7c7;
+	background: #000;
+	padding: 0 6px
 }
 
 .container {
