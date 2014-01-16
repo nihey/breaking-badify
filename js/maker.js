@@ -36,6 +36,10 @@ function breakingBadfy(firstName, lastName){
 	var firstList = findElement(firstName);
 	var lastList = findElement(lastName);
 	
+	console.log("---NEW NAME---");
+	console.log(firstList);
+	console.log(lastList);
+	
 	if(firstList && lastList) {
 		
 		var firstElem = firstList[0];
@@ -43,10 +47,6 @@ function breakingBadfy(firstName, lastName){
 		
 		var firstIndex = firstList[1];
 		var lastIndex = lastList[1];
-		
-		console.log("---NEW NAME---");
-		console.log(firstList);
-		console.log(lastList);
 		
 		$("#bb-body").attr("style", "");
 		$("#bb-name").html("");
@@ -105,7 +105,7 @@ function findElement(pName) {
 	var i;
 	
 	// First Try 2 Letters
-	for(i = 0; i < (pName.length - 2); i++) {
+	for(i = 0; i < (pName.length - 1); i++) {
 		for(var element in periodicTable) {
 				if(pName.substr(i, 2).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
 					return [periodicTable[element], i];
@@ -114,7 +114,7 @@ function findElement(pName) {
 	}
 	
 	// Then 1 Letter 
-	for(i = 0; i < (pName.length - 2); i++) {
+	for(i = 0; i < pName.length; i++) {
 		for(var element in periodicTable) {
 			if(pName.substr(i, 1).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
 				return [periodicTable[element], i];
