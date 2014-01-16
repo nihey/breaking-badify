@@ -140,6 +140,8 @@ span {
 }
 
 .chemical-element {
+  width: 165px;
+  height: 165px;
   position: relative;
   font: bold 95px Helvetica;
   color: #fafffb;

@@ -73,7 +73,7 @@ function breakingBadfy(firstName, lastName){
 					"<div class='desc' role='bottom-left-2'>" + lastElem.electronic_configuration + "</div>" +
 			"</span>" +
 			"<span class='title-2'>" +
-					"<div class='chemical-element-out'>" + lastName.substr(lastElem.symbol.length) + "</div>" + 
+					"<div class='chemical-element-out'>" + lastName.substr(lastIndex + lastElem.symbol.length) + "</div>" + 
 			"</span>").appendTo($("#bb-name"));
 		audio.play();
 	}
@@ -104,19 +104,18 @@ function findElement(pName) {
 	
 	var i;
 	
-	// First Try 2 Letters
-	for(i = 0; i < (pName.length - 1); i++) {
-		for(var element in periodicTable) {
-				if(pName.substr(i, 2).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
-					return [periodicTable[element], i];
-				}
-		}
+	// First Try 2 Letters in ze beggining
+	for(var element in periodicTable) {
+			if(pName.substr(i, 2).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
+				return [periodicTable[element], 0];
+			}
 	}
 	
-	// Then 1 Letter 
+	// Then 1 or 2 Letter from ze beggining to ze end 
 	for(i = 0; i < pName.length; i++) {
 		for(var element in periodicTable) {
-			if(pName.substr(i, 1).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
+			var str = periodicTable[element].symbol;
+			if(pName.substr(i, str.length).toUpperCase() == str.toUpperCase()) {
 				return [periodicTable[element], i];
 			}
 		}
