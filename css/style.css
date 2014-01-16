@@ -33,6 +33,7 @@ input[type="text"] {
 }
 
 .collapsible {
+  width: 190px;
   overflow: hidden;
   transition: height 0.5s;
     -moz-transition: height 0.5s; /* Firefox 4 */
