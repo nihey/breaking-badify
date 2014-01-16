@@ -16,17 +16,38 @@
 <html>
   <head>
     <title>Breaking Bad-Fy Me</title>
-
+	<meta property="og:image" content="img/logo.jpg"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/modernizr.custom.98761.js"></script>
 
   </head>
   <body>
+  	<!-- Facebook SDK-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=500060916781954";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 		<div id="input-group">
-			<input type="text" id="input-first-name" value="Breaking"><br>
-			<input type="text" id="input-last-name" value="Bad"><br>
-			<input type="button" id="input-generate" value="Breaking Bad-Fy Me">
+			<input type="text" id="input-first-name" value="Breaking" style="width: 169px;"><br>
+			<input type="text" id="input-last-name" value="Bad" style="margin-top:10px;width: 169px;"><br>
+			<a href="#" class="breakingbadbutton" id="input-generate" style="margin-top:10px;margin-bottom:10px;">Breaking Bad-Fy Me</a><br>
+
+		<!-- Twitter Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" data-size="large"
+			data-text="Breaking Bad-fy Me! " 
+			data-url="nihas.com.br/BreakingBadfyMe" data-counturl="nihas.com.br/BreakingBadfyMe" ></a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<br>
+		<!-- Facebook Button-->
+		<div style="margin-top:10px;" class="fb-like" data-href="http://nihas.com.br/BreakingBadfyMe" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+
 		</div>
 		<div id="bb-body" style="display: none">
 
