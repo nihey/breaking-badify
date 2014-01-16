@@ -11,6 +11,7 @@
 
 #input-collapse {
 	border: 1px solid #DDFFE2;
+  color: #eeeeee;
 	background: linear-gradient(0deg, #5cbe73 1%, #182b04 100%);
 }
 
@@ -19,7 +20,7 @@ input[type="text"] {
 	margin-bottom: 4px;
 	width: 169px;
 	height: 25px;
-	font-size: 11px;
+	font-size: 15px;
 	color: #c7c7c7;
 	border: 1px solid #c7c7c7;
 	background: #000;
