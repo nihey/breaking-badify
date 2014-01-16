@@ -6,6 +6,17 @@ $("#input-generate").click(function () {
 
 });
 
+$("#input-collapse").click(function() {
+	if($("#input-collapse").html() == "Close") {
+		$("#input-group-collapsible").attr("style","height: 0px");
+		$("#input-collapse").html("Open");
+	}
+	else {
+		$("#input-group-collapsible").attr("style","height: 194px");
+		$("#input-collapse").html("Close");
+	}
+});
+
 $(document).ready(function(){
 	
 	console.log("onload");
