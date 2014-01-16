@@ -47,19 +47,23 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 		<div id="input-group">
-			<input type="text" id="input-first-name" value="Breaking" style="width: 169px;"><br>
-			<input type="text" id="input-last-name" value="Bad" style="margin-top:10px;width: 169px;"><br>
-			<a href="#" class="breakingbadbutton" id="input-generate" style="margin-top:10px;margin-bottom:10px;">Breaking Bad-Fy Me</a><br>
+			<div id="input-group-collapsible" class="collapsible">
+				<input type="text" id="input-first-name" value="Breaking" style="width: 169px;"><br>
+				<input type="text" id="input-last-name" value="Bad" style="margin-top:10px;width: 169px;"><br>
+				<a href="#" class="breakingbadbutton" id="input-generate" style="margin-top:10px;margin-bottom:10px;">Breaking Bad-Fy Me</a><br>
 
-		<!-- Twitter Button-->
-			<a href="https://twitter.com/share" class="twitter-share-button" data-size="large"
-			data-text="Breaking Bad-fy Me! " 
-			data-url="nihas.net/BreakingBadfyMe" data-counturl="nihas.net/BreakingBadfyMe" ></a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			<br>
-		<!-- Facebook Button-->
-		<div style="margin-top:10px;" class="fb-like" data-href="http://nihas.net/BreakingBadfyMe" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-
+				<!-- Twitter Button-->
+					<a href="https://twitter.com/share" class="twitter-share-button" data-size="large"
+					data-text="Breaking Bad-fy Me! " 
+					data-url="nihas.net/BreakingBadfyMe" data-counturl="nihas.net/BreakingBadfyMe" ></a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					<br>
+				<!-- Facebook Button-->
+				<div style="margin-top:10px;" class="fb-like" data-href="http://nihas.net/BreakingBadfyMe" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+				<br>
+			</div>
+			<button id="input-collapse" style="width: 169px;">Close</button>
+			
 		</div>
 		<div id="bb-body" style="display: none">
 

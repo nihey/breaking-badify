@@ -6,6 +6,18 @@ $("#input-generate").click(function () {
 
 });
 
+$("#input-collapse").click(function() {
+	console.log("HOZ");
+	if($("#input-collapse").html() == "Close") {
+		$("#input-group-collapsible").attr("style","display:none;");
+		$("#input-collapse").html("Open");
+	}
+	else {
+		$("#input-group-collapsible").attr("style","");
+		$("#input-collapse").html("Close");
+	}
+});
+
 $(document).ready(function(){
 	
 	console.log("onload");
@@ -27,8 +39,6 @@ function getURLParameter(name) {
 
 function breakingBadfy(firstName, lastName){
 
-	$(".twitter-share-button").attr("data-text","Breaking Bad-fy Me! nihas.net/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName);
-	$(".fb-like").attr("data-href","http://nihas.net/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName); // "https://googledrive.com/host/0B5dsvZE7FYbjR1JscnQ5aFZybDQ/"
 	document.title = firstName + " "+lastName;
 	var firstList = findElement(firstName);
 	var lastList = findElement(lastName);
