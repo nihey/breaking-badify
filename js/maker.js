@@ -15,7 +15,9 @@ $("#input-generate").click(function () {
 });
 
 $(document).ready(function(){
-		console.log("onload");
+	
+	console.log("onload");
+	
 	var f = getURLParameter("firstName");
 	var l = getURLParameter("lastName");
 	if(f !== 'null' && l !== 'null'){
@@ -76,6 +78,10 @@ function breakingBadfy(firstName, lastName){
 					"<div class='chemical-element-out'>" + lastName.substr(lastIndex + lastElem.symbol.length) + "</div>" + 
 			"</span>").appendTo($("#bb-name"));
 		audio.play();
+		if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+			console.log("firefox");
+			$(".chemical-element").attr("style", "width: 100px; height: 100px;");
+		}
 	}
 }
 
