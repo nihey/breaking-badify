@@ -75,9 +75,11 @@ function breakingBadfy(firstName, lastName){
 	
 	var firstElem = firstList[0];
 	var lastElem = lastList[0];
-	
+
 	var firstIndex = firstList[1];
 	var lastIndex = lastList[1];
+
+	$("#elementsName").html("You got " + firstList[2] + " and " + lastList[2]+ ".");
 	
 	$("#bb-body").attr("style", "");
 	$("#bb-name").html("");
@@ -141,7 +143,7 @@ function findElement(pName) {
 	// First Try 2 Letters in ze beggining
 	for(var element in periodicTable) {
 			if(pName.substr(0, 2).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
-				return [periodicTable[element], 0];
+				return [periodicTable[element], 0,element];
 			}
 	}
 	
@@ -149,7 +151,7 @@ function findElement(pName) {
 	for(var element in periodicTable) {
 		var str = periodicTable[element].symbol;
 		if(pName.substr(0, str.length).toUpperCase() == str.toUpperCase()) {
-			return [periodicTable[element], 0];
+			return [periodicTable[element], 0,element];
 		}
 	}
 	

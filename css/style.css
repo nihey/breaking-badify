@@ -4,6 +4,26 @@
   src: url(cooper.ttf);
 }
 
+#footer{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 15px;
+  color: #1e3a1c;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+#elementsName{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10%;
+  color: #1e3a1c;
+  font-family: Helvetica;
+  font-size: 22px;
+}
+
 #input-group {
   float: left;
   margin-left: 17px;
