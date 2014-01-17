@@ -61,7 +61,7 @@ function breakingBadfy(firstName, lastName){
 			"atomic_weight" : 256.0001,
 			"oxidation_states" : "-",
 			"electronic_configuration" : "[Zwg]5f¹6d¹7s²",
-		}, 0];
+		}, 0, firstName + " (non element)"];
 	}
 	if(!lastList) {
 		lastList = [{
@@ -70,7 +70,7 @@ function breakingBadfy(firstName, lastName){
 			"atomic_weight" : 256.0001,
 			"oxidation_states" : "-",
 			"electronic_configuration" : "[Zwg]5f¹6d¹7s²",
-		}, 0];
+		}, 0, lastName + " (non element)"];
 	}
 	
 	var firstElem = firstList[0];
