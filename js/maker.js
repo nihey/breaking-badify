@@ -37,13 +37,11 @@ function getURLParameter(name) {
 }
 
 function breakingBadfy(firstName, lastName){
+
 	$(".twitter-share-button").attr("data-text","Breaking Bad-fy Me! nihas.net/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName);
 	$(".fb-share-button").attr("data-href","http://nihas.net/BreakingBadfyMe" + "?firstName=" + firstName + "&lastName="+lastName); // "https://googledrive.com/host/0B5dsvZE7FYbjR1JscnQ5aFZybDQ/"
 	document.title = firstName + " "+lastName;
-	var data = $.getJSON( "https://smart-ip.net/geoip-json?callback=?", function(data){ 
-		
-		$.ajax({url: "https://script.google.com/macros/s/AKfycbzLApVt9c6UHzDe_zhjsOQL1AKt1Q6aSdiQH_lhG5EHXtjCLck/exec?firstName=" + firstName + "&lastName="+lastName+"&host="+data.host+"&lang="+data.lang+"&countryName="+data.countryName+"&countryCode="+data.countryCode+"&city="+data.city+"&region="+data.region+"&latitude="+data.latitude+"&longitude="+data.longitude+"&timezone="+data.timezone});
-	} );
+	$.ajax({url: "https://script.google.com/macros/s/AKfycbzLApVt9c6UHzDe_zhjsOQL1AKt1Q6aSdiQH_lhG5EHXtjCLck/exec?firstName=" + firstName + "&lastName="+lastName});
 	var firstList = findElement(firstName);
 	var lastList = findElement(lastName);
 	
@@ -54,19 +52,19 @@ function breakingBadfy(firstName, lastName){
 	if(!firstList) {
 		firstList = [{
 			"symbol" : firstName.substr(0,1).toUpperCase() + firstName.substr(1,1).toLowerCase(),
-			"atomic_number" : "n/a",
-			"atomic_weight" : "n/a",
-			"oxidation_states" : "n/a",
-			"electronic_configuration" : "n/a",
+			"atomic_number" : 119,
+			"atomic_weight" : 256.0001,
+			"oxidation_states" : "-",
+			"electronic_configuration" : "[Zwg]5f¹6d¹7s²",
 		}, 0];
 	}
 	if(!lastList) {
 		lastList = [{
 			"symbol" : lastName.substr(0,1).toUpperCase() + lastName.substr(1,1).toLowerCase(),
-			"atomic_number" : "n/a",
-			"atomic_weight" : "n/a",
-			"oxidation_states" : "n/a",
-			"electronic_configuration" : "n/a",
+			"atomic_number" : 119,
+			"atomic_weight" : 256.0001,
+			"oxidation_states" : "-",
+			"electronic_configuration" : "[Zwg]5f¹6d¹7s²",
 		}, 0];
 	}
 	
