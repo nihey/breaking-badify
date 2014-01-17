@@ -147,11 +147,13 @@ function findElement(pName) {
 			}
 	}
 	
-	// Then 1 Letter in ze beggining
-	for(var element in periodicTable) {
-		var str = periodicTable[element].symbol;
-		if(pName.substr(0, str.length).toUpperCase() == str.toUpperCase()) {
-			return [periodicTable[element], 0,element];
+	// Then 1 or 2 Letter from ze beggining to ze end 
+	for(i = 0; i < pName.length; i++) {
+		for(var element in periodicTable) {
+			var str = periodicTable[element].symbol;
+			if(pName.substr(i, str.length).toUpperCase() == str.toUpperCase()) {
+				return [periodicTable[element], i, element];
+			}
 		}
 	}
 	

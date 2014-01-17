@@ -250,6 +250,7 @@ span {
 }
 
 .chemical-element-out {
+  width: 1280px;
   font-size: 95px;
   font-family: Cooper;
   color: #fafffb;
