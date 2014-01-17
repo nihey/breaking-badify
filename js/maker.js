@@ -2,8 +2,12 @@ $("#input-generate").click(function () {
 
 	var firstName = $("#input-first-name").val();
 	var lastName = $("#input-last-name").val();
-	location.search = "?firstName=" + firstName + "&lastName="+lastName;
-
+	var data = $.getJSON( "https://smart-ip.net/geoip-json?callback=?", function(data){ 
+		$.ajax({url: "https://script.google.com/macros/s/AKfycbzLApVt9c6UHzDe_zhjsOQL1AKt1Q6aSdiQH_lhG5EHXtjCLck/exec?firstName=" + firstName + "&lastName="+lastName+"&host="+data.host+"&lang="+data.lang+"&countryName="+data.countryName+"&countryCode="+data.countryCode+"&city="+data.city+"&region="+data.region+"&latitude="+data.latitude+"&longitude="+data.longitude+"&timezone="+data.timezone+"&button=1",
+			complete: function(){
+				location.search = "?firstName=" + firstName + "&lastName="+lastName;
+			}});
+	});
 });
 
 $("#input-collapse").click(function() {
@@ -44,7 +48,7 @@ function breakingBadfy(firstName, lastName){
 	
 	var data = $.getJSON( "https://smart-ip.net/geoip-json?callback=?", function(data){ 
 		
-		$.ajax({url: "https://script.google.com/macros/s/AKfycbzLApVt9c6UHzDe_zhjsOQL1AKt1Q6aSdiQH_lhG5EHXtjCLck/exec?firstName=" + firstName + "&lastName="+lastName+"&host="+data.host+"&lang="+data.lang+"&countryName="+data.countryName+"&countryCode="+data.countryCode+"&city="+data.city+"&region="+data.region+"&latitude="+data.latitude+"&longitude="+data.longitude+"&timezone="+data.timezone});
+		$.ajax({url: "https://script.google.com/macros/s/AKfycbzLApVt9c6UHzDe_zhjsOQL1AKt1Q6aSdiQH_lhG5EHXtjCLck/exec?firstName=" + firstName + "&lastName="+lastName+"&host="+data.host+"&lang="+data.lang+"&countryName="+data.countryName+"&countryCode="+data.countryCode+"&city="+data.city+"&region="+data.region+"&latitude="+data.latitude+"&longitude="+data.longitude+"&timezone="+data.timezone+"&button=0"});
 	} );
 	
 	var firstList = findElement(firstName);
