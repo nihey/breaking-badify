@@ -171,6 +171,7 @@ body {
 }
 
 .wrapper {
+  white-space: nowrap;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -212,6 +213,7 @@ span {
 }
 
 .chemical-element {
+  white-space: normal;
   width: 165px;
   height: 165px;
   position: relative;
