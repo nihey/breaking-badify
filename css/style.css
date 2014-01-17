@@ -241,7 +241,7 @@ span {
   position: relative;
   font: bold 95px Helvetica;
   color: #fafffb;
-  padding: 25px 25px 25px 30px;
+  padding: 25px 25px 25px 25px;
   border: 3px solid #DDFFE2;
   display: inline-block;
   background: linear-gradient(-45deg, #5cbe73 1%, #182b04 100%);
@@ -260,7 +260,6 @@ span {
 
 .chemical-element:nth-child(4) {
   margin-left: 165px;
-  padding-left: 23px;
 }
 
 .desc {

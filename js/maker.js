@@ -96,7 +96,7 @@ function breakingBadfy(firstName, lastName){
 		 "<div class='chemical-element-out'>" + firstName.substr(firstIndex + firstElem.symbol.length) + "</div>" +
 		"</span>" +
 		"<br>" +
-		"<span class='chemical-element' style='text-align:center;'>" +
+		"<span class='chemical-element'>" +
 				lastElem.symbol+
 				"<div class='desc' role='top-left'>" + lastElem.atomic_weight + "</div>" +
 				"<div class='desc' role='top-right'>" +
@@ -108,6 +108,12 @@ function breakingBadfy(firstName, lastName){
 		"<span class='title-2'>" +
 				"<div class='chemical-element-out'>" + lastName.substr(lastIndex + lastElem.symbol.length) + "</div>" + 
 		"</span>").appendTo($("#bb-name"));
+
+	// trata o padding para simbolos que tenham letra M
+	if(firstElem.symbol.toLowerCase().indexOf("m") != -1 || lastElem.symbol.toLowerCase().indexOf("m") != -1 ){
+		$('.chemical-element').css("padding","25px 0px 25px 0px");
+	}
+
 	audio.play();
 	if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
 		console.log("firefox");
