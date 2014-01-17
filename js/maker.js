@@ -125,7 +125,7 @@ function breakingBadfy(firstName, lastName){
 	audio.play();
 	if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
 		console.log("firefox");
-		$(".chemical-element").attr("style", "width: 100px; height: 100px;");
+		$(".chemical-element").attr("style", "width: 110px; height: 110px;");
 	}
 }
 
