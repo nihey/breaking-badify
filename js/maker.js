@@ -49,46 +49,62 @@ function breakingBadfy(firstName, lastName){
 	console.log(firstList);
 	console.log(lastList);
 	
-	if(firstList && lastList) {
-		
-		var firstElem = firstList[0];
-		var lastElem = lastList[0];
-		
-		var firstIndex = firstList[1];
-		var lastIndex = lastList[1];
-		
-		$("#bb-body").attr("style", "");
-		$("#bb-name").html("");
-		$("<span class='chemical-element'>" +
-				firstElem.symbol+
-				"<div class='desc' role='top-left'>" + firstElem.atomic_weight + "</div>" +
+	if(!firstList) {
+		firstList = [{
+			"symbol" : firstName.substr(0,1).toUpperCase() + firstName.substr(1,1).toLowerCase(),
+			"atomic_number" : "n/a",
+			"atomic_weight" : "n/a",
+			"oxidation_states" : "n/a",
+			"electronic_configuration" : "n/a",
+		}, 0];
+	}
+	if(!lastList) {
+		lastList = [{
+			"symbol" : lastName.substr(0,1).toUpperCase() + lastName.substr(1,1).toLowerCase(),
+			"atomic_number" : "n/a",
+			"atomic_weight" : "n/a",
+			"oxidation_states" : "n/a",
+			"electronic_configuration" : "n/a",
+		}, 0];
+	}
+	
+	var firstElem = firstList[0];
+	var lastElem = lastList[0];
+	
+	var firstIndex = firstList[1];
+	var lastIndex = lastList[1];
+	
+	$("#bb-body").attr("style", "");
+	$("#bb-name").html("");
+	$("<span class='chemical-element'>" +
+			firstElem.symbol+
+			"<div class='desc' role='top-left'>" + firstElem.atomic_weight + "</div>" +
+			"<div class='desc' role='top-right'>" +
+				oxidationStates(firstElem) +
+			"</div>" +
+			"<div class='desc big' role='bottom-left-1'>" + firstElem.atomic_number + "</div>" +
+			"<div class='desc' role='bottom-left-2'>" + firstElem.electronic_configuration + "</div>" +
+		"</span>" +
+		"<span class='title-1'>" +
+		 "<div class='chemical-element-out'>" + firstName.substr(firstIndex + firstElem.symbol.length) + "</div>" +
+		"</span>" +
+		"<br>" +
+		"<span class='chemical-element' style='text-align:center;'>" +
+				lastElem.symbol+
+				"<div class='desc' role='top-left'>" + lastElem.atomic_weight + "</div>" +
 				"<div class='desc' role='top-right'>" +
-					oxidationStates(firstElem) +
+					oxidationStates(lastElem) +
 				"</div>" +
-				"<div class='desc big' role='bottom-left-1'>" + firstElem.atomic_number + "</div>" +
-				"<div class='desc' role='bottom-left-2'>" + firstElem.electronic_configuration + "</div>" +
-			"</span>" +
-			"<span class='title-1'>" +
-			 "<div class='chemical-element-out'>" + firstName.substr(firstIndex + firstElem.symbol.length) + "</div>" +
-			"</span>" +
-			"<br>" +
-			"<span class='chemical-element' style='text-align:center;'>" +
-					lastElem.symbol+
-					"<div class='desc' role='top-left'>" + lastElem.atomic_weight + "</div>" +
-					"<div class='desc' role='top-right'>" +
-						oxidationStates(lastElem) +
-					"</div>" +
-					"<div class='desc medium' role='bottom-left-1'>" + lastElem.atomic_number + "</div>" +
-					"<div class='desc' role='bottom-left-2'>" + lastElem.electronic_configuration + "</div>" +
-			"</span>" +
-			"<span class='title-2'>" +
-					"<div class='chemical-element-out'>" + lastName.substr(lastIndex + lastElem.symbol.length) + "</div>" + 
-			"</span>").appendTo($("#bb-name"));
-		audio.play();
-		if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-			console.log("firefox");
-			$(".chemical-element").attr("style", "width: 100px; height: 100px;");
-		}
+				"<div class='desc medium' role='bottom-left-1'>" + lastElem.atomic_number + "</div>" +
+				"<div class='desc' role='bottom-left-2'>" + lastElem.electronic_configuration + "</div>" +
+		"</span>" +
+		"<span class='title-2'>" +
+				"<div class='chemical-element-out'>" + lastName.substr(lastIndex + lastElem.symbol.length) + "</div>" + 
+		"</span>").appendTo($("#bb-name"));
+	audio.play();
+	if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+		console.log("firefox");
+		$(".chemical-element").attr("style", "width: 100px; height: 100px;");
 	}
 }
 
@@ -119,18 +135,16 @@ function findElement(pName) {
 	
 	// First Try 2 Letters in ze beggining
 	for(var element in periodicTable) {
-			if(pName.substr(i, 2).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
+			if(pName.substr(0, 2).toUpperCase() == periodicTable[element].symbol.toUpperCase()) {
 				return [periodicTable[element], 0];
 			}
 	}
 	
-	// Then 1 or 2 Letter from ze beggining to ze end 
-	for(i = 0; i < pName.length; i++) {
-		for(var element in periodicTable) {
-			var str = periodicTable[element].symbol;
-			if(pName.substr(i, str.length).toUpperCase() == str.toUpperCase()) {
-				return [periodicTable[element], i];
-			}
+	// Then 1 Letter in ze beggining
+	for(var element in periodicTable) {
+		var str = periodicTable[element].symbol;
+		if(pName.substr(0, str.length).toUpperCase() == str.toUpperCase()) {
+			return [periodicTable[element], 0];
 		}
 	}
 	
