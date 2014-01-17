@@ -105,33 +105,9 @@ input[type="text"] {
   top:1px;
 }
 
-/**
- *
- * Absolute position in the center of the parent element (top, left). 
- *
- */
-
-.wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
 .wrapper2 {
   position: absolute;
   left: 50%;
-}
-
-/**
- *
- * Absolute position in the center of the parent element (-50%, -50%). 
- *
- */
-.wrapper {
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 #smoke {
@@ -248,10 +224,11 @@ span {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
   text-align:center;
   margin-right: 10px;  
+  margin-left: 10px;  
 }
 
 .chemical-element-out {
-  width: 1280px;
+  white-space: nowrap;
   font-size: 95px;
   font-family: Cooper;
   color: #fafffb;
@@ -302,14 +279,19 @@ div[role="bottom-left-2"] {
 
 .title-1,
 .title-2 {
-  width: 50px;
+  width: 165px;
   display: inline-block;
-  height: 130px;
+  height: 115px;
   /*vertical-align: bottom; */
 }
 
-.title-2 {
-  height: 134px;
+.title-pre {
+  text-align: right;
+  white-space: nowrap;
+  direction: rtl;
+  width: 165px;
+  display: inline-block;
+  height: 115px;
 }
 
 

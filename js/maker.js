@@ -83,7 +83,10 @@ function breakingBadfy(firstName, lastName){
 	
 	$("#bb-body").attr("style", "");
 	$("#bb-name").html("");
-	$("<span class='chemical-element'>" +
+	$("<span class='title-1'>" +
+		 "<div class='chemical-element-out title-pre'>" + firstName.substr(0, firstIndex) + "</div>" +
+		"</span>" +
+		"<span class='chemical-element'>" +
 			firstElem.symbol+
 			"<div class='desc' role='top-left'>" + firstElem.atomic_weight + "</div>" +
 			"<div class='desc' role='top-right'>" +
@@ -96,6 +99,11 @@ function breakingBadfy(firstName, lastName){
 		 "<div class='chemical-element-out'>" + firstName.substr(firstIndex + firstElem.symbol.length) + "</div>" +
 		"</span>" +
 		"<br>" +
+		"<span class='title-1'>" +
+		 "</span>" +
+		"<span class='title-1'>" +
+		 "<div class='chemical-element-out title-pre'>" + lastName.substr(0, lastIndex) + "</div>" +
+		"</span>" +
 		"<span class='chemical-element'>" +
 				lastElem.symbol+
 				"<div class='desc' role='top-left'>" + lastElem.atomic_weight + "</div>" +
