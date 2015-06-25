@@ -30,26 +30,26 @@
 }
 
 #input-collapse {
-	border: 1px solid #DDFFE2;
+  border: 1px solid #DDFFE2;
   color: #eeeeee;
-	background: linear-gradient(0deg, #5cbe73 1%, #182b04 100%);
+  background: linear-gradient(0deg, #5cbe73 1%, #182b04 100%);
 }
 
 input[type="text"] {
 
-	margin-bottom: 4px;
-	width: 169px;
-	height: 25px;
-	font-size: 15px;
-	color: #c7c7c7;
-	border: 1px solid #c7c7c7;
-	background: #000;
-	padding: 0 6px
+  margin-bottom: 4px;
+  width: 169px;
+  height: 25px;
+  font-size: 15px;
+  color: #c7c7c7;
+  border: 1px solid #c7c7c7;
+  background: #000;
+  padding: 0 6px
 }
 
 .container {
-	margin-top: 7px;
-	margin-left: 7px;
+  margin-top: 7px;
+  margin-left: 7px;
 }
 
 .collapsible {
@@ -120,8 +120,8 @@ input[type="text"] {
 
 /**
  *
- * Absolute position at $top and $left. 
- * You can also add value for the $content property. 
+ * Absolute position at $top and $left.
+ * You can also add value for the $content property.
  *
  */
 /**
@@ -135,13 +135,13 @@ input[type="text"] {
  */
 /**
  *
- * Linear gradient with old and new syntax. 
+ * Linear gradient with old and new syntax.
  * bg(to bottom, top, #f00, #00f)
  *
  */
 /**
  *
- * Animation 
+ * Animation
  *
  */
 /**
@@ -179,7 +179,7 @@ body {
 
 /**
  *
- * Absolute position in the center of the parent element (-50%, -50%). 
+ * Absolute position in the center of the parent element (-50%, -50%).
  *
  */
 .wrapper {
@@ -225,8 +225,8 @@ span {
   background: linear-gradient(-45deg, #5cbe73 1%, #182b04 100%);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
   text-align:center;
-  margin-right: 10px;  
-  margin-left: 10px;  
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .chemical-element-out {

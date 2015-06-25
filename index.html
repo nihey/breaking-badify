@@ -1,13 +1,13 @@
 <!--
   Breaking Bad
 
-  A tribute to the best fucking series in the world. 
+  A tribute to the best fucking series in the world.
 
   Just some CSS and SVG. I created the SVG from the original Logo with
   Photoshop (path) and Illustrator (SVG).
 
   The original Logo is © by American Movie Classics Company LLC.
-  
+
 
   2012 by Tim Pietrusky
   timpietrusky.com
@@ -16,133 +16,98 @@
 <html>
   <head>
     <title>Breaking Bad-Fy Me</title>
-	<meta property="og:site_name" content="Breaking Bad-fy Me"/>
-	<meta property="og:title" content="Breaking Bad-fy Me"/>
-	<meta property="og:description" content="Breaking Bad-fy your name!"/>
-	<meta property="og:image" content="http://nihas.net/BreakingBadfyMe/img/logo.jpg"/>
-	<meta property="fb:app_id" content="500060916781954"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="http://nihas.net/BreakingBadfyMe/"/>
+    <meta property="og:site_name" content="Breaking Bad-fy Me"/>
+    <meta property="og:title" content="Breaking Bad-fy Me"/>
+    <meta property="og:description" content="Breaking Bad-fy your name!"/>
+    <meta property="og:image" content="http://nihas.net/BreakingBadfyMe/img/logo.jpg"/>
+    <meta property="fb:app_id" content="500060916781954"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://nihas.net/BreakingBadfyMe/"/>
 
-	<!-- <meta property="og:url" content="http://nihas.net/BreakingBadfyMe/"/> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/modernizr.custom.98761.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-		<script src="js/jquery-1.10.2.min.js"></script>
-		<script src="js/modernizr.custom.98761.js"></script>
-
-<!-- Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-47214426-1', 'nihas.net');
-  ga('send', 'pageview');
-
-</script>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-47214426-1', 'nihas.net');
+      ga('send', 'pageview');
+    </script>
 
   </head>
   <body>
-  	<!-- Facebook SDK-->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=500060916781954";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Facebook SDK-->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=500060916781954";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-		<div class="container" id="input-group">
-			<div style="float: left; width: 180px">
-				<div id="input-group-collapsible" class="collapsible" style="height: 200px;">
-					<input type="text" id="input-first-name" value="Breaking"><br>
-					<input type="text" id="input-last-name" value="Bad"><br>
-					<a href="#" class="breakingbadbutton" id="input-generate" style="margin-top:10px;margin-bottom:10px;">Breaking Bad-Fy Me</a>
-					<!-- Twitter Button-->
-					<a href="https://twitter.com/share" class="twitter-share-button" data-size="large"
-					data-text="Breaking Bad-fy Me! nihas.net/BreakingBadfyMe" 
-					data-url="nihas.net/BreakingBadfyMe" data-counturl="nihas.net/BreakingBadfyMe" ></a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-					<br>
-		<!-- Facebook Buttons-->
-		
-		<div style="margin-top:10px;" class="fb-share-button" data-href="http://nihas.net/BreakingBadfyMe" data-type="button"></div>
-				</div>
-				<button id="input-collapse" style="width: 169px;">Close</button><br>
-				<div style="margin-top:10px;" class="fb-like" data-href="http://nihas.net/BreakingBadfyMe" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-				
-			</div>
-		</div>
+    <div class="container" id="input-group">
+      <div style="float: left; width: 180px">
+        <div id="input-group-collapsible" class="collapsible" style="height: 200px;">
+          <input type="text" id="input-first-name" value="Breaking"><br>
+          <input type="text" id="input-last-name" value="Bad"><br>
+          <a href="#" class="breakingbadbutton" id="input-generate" style="margin-top:10px;margin-bottom:10px;">Breaking Bad-Fy Me</a>
+          <!-- Twitter Button-->
+          <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Breaking Bad-fy Me! nihas.net/BreakingBadfyMe" data-url="nihas.net/BreakingBadfyMe" data-counturl="nihas.net/BreakingBadfyMe" ></a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <br>
+          <!-- Facebook Buttons-->
 
+          <div style="margin-top:10px;" class="fb-share-button" data-href="http://nihas.net/BreakingBadfyMe" data-type="button"></div>
+        </div>
+        <button id="input-collapse" style="width: 169px;">Close</button><br>
+        <div style="margin-top:10px;" class="fb-like" data-href="http://nihas.net/BreakingBadfyMe" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+      </div>
+    </div>
 
+    <div id="bb-body" style="display: none">
+      <section id="breakingbad">
+        <div id="bb-name" class="wrapper"></div>
+        <div class="wrapper2">
+          <canvas id="smoke"></canvas>
+        </div>
+      </section>
 
-		<div id="bb-body" style="display: none">
+      <audio></audio>
+      <div id="player">
+        <svg role="playing" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" width="40px" height="40px" viewBox="0 0 75 75"><g>
+          <g>
+            <polygon points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"/>
+            <path d="M 48.128,49.03 C 50.057,45.934 51.19,42.291 51.19,38.377 C 51.19,34.399 50.026,30.703 48.043,27.577" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+            <path d="M 55.082,20.537 C 58.777,25.523 60.966,31.694 60.966,38.377 C 60.966,44.998 58.815,51.115 55.178,56.076" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+            <path d="M 61.71,62.611 C 66.977,55.945 70.128,47.531 70.128,38.378 C 70.128,29.161 66.936,20.696 61.609,14.01" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+          </g>
+        </svg>
+        <svg role="paused" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" id="layer1" width="40px" height="40px" viewBox="0 0 75 75">
+          <g>
+            <polygon points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"/>
+            <path d="M 48.651772,50.269646 69.395223,25.971024" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
+            <path d="M 69.395223,50.269646 48.651772,25.971024" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
+          </g>
+        </svg>
+      </div>
+    </div>
 
-			<section id="breakingbad">
-				<div id="bb-name" class="wrapper">
-				</div>
-				<div class="wrapper2">
-					<canvas id="smoke"></canvas>
-				</div>
-			</section>
-			<!-- /Breaking Bad Logo -->
+    <div id="elementsName"></div>
 
-			<!-- Breaking Bad theme -->
-			<audio></audio>
+    <div id="footer">
+      Developed by Bruno Orlandi and Nihey Takizawa. Credits to Tim Pietrusky and Ed Welch. 2014.
+    </div>
 
-			<div id="player">
-				
-				<svg role="playing" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" width="40px" height="40px" viewBox="0 0 75 75">
-					<g>
-						<polygon
-						points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"
-						/>
-					<path 
-							d="M 48.128,49.03 C 50.057,45.934 51.19,42.291 51.19,38.377 C 51.19,34.399 50.026,30.703 48.043,27.577" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
-					<path 
-						d="M 55.082,20.537 C 58.777,25.523 60.966,31.694 60.966,38.377 C 60.966,44.998 58.815,51.115 55.178,56.076" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
-
-					<path 
-						d="M 61.71,62.611 C 66.977,55.945 70.128,47.531 70.128,38.378 C 70.128,29.161 66.936,20.696 61.609,14.01"
-						style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
-					</g>
-				</svg>
-
-				<svg role="paused" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" id="layer1" width="40px" height="40px" viewBox="0 0 75 75">
-				<g><polygon
-					 points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769"
-					 style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;" />
-				<path
-					 d="M 48.651772,50.269646 69.395223,25.971024"
-					 style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"
-					 inkscape:connector-curvature="0"
-					 sodipodi:nodetypes="cc" />
-				<path
-					 d="M 69.395223,50.269646 48.651772,25.971024"
-					 style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"
-					 inkscape:connector-curvature="0"
-					 sodipodi:nodetypes="cc" />
-				</g>
-				</svg>
-			</div>
-		</div>
-
-		<!-- Footer -->
-		<div id="elementsName">
-			
-		</div>
-
-		<!-- Footer -->
-		<div id="footer">
-			Developed by Bruno Orlandi and Nihey Takizawa. Credits to Tim Pietrusky and Ed Welch. 2014.
-		</div>
-
-
-		<script type="text/javascript" src="js/script.js"></script>
-		<script type="text/javascript" src="js/periodicTable.js"></script>
-		<script type="text/javascript" src="js/maker.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/periodicTable.js"></script>
+    <script type="text/javascript" src="js/maker.js"></script>
   </body>
 </html>

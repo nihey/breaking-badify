@@ -1,7 +1,7 @@
 /**
   Breaking Bad
 
-  A tribute to the best fucking series in the world. 
+  A tribute to the best fucking series in the world.
 
   The making of: http://timpietrusky.com/breaking-bad-logo
 
@@ -11,7 +11,7 @@
   Photoshop (path) and Illustrator (SVG).
 
   The original Logo is © by American Movie Classics Company LLC.
-  
+
 
   2012 by Tim Pietrusky
   timpietrusky.com
@@ -19,7 +19,7 @@
 
 /**
  * @Gray Ghost Visuals: The theme is for you!
- * 
+ *
  * Thanks to televisiontunes.com for the Breaking Bad theme
  * http://www.televisiontunes.com/Breaking_Bad.html
  */
@@ -27,14 +27,14 @@ var audio = $('audio').get(0),
     _paused = $('svg[role="paused"]'),
     _playing = $('svg[role="playing"]');
 
-audio.src = Modernizr.audio.ogg ? 
-  'audio/breaking_bad_intro.ogg': 
+audio.src = Modernizr.audio.ogg ?
+  'audio/breaking_bad_intro.ogg':
   'audio/breaking_bad_intro.mp3';
 var ended = false;
 audio.addEventListener('ended',function(){
     if(ended === false){
-        audio.src = Modernizr.audio.ogg ? 
-      'audio/bb-long.ogg': 
+        audio.src = Modernizr.audio.ogg ?
+      'audio/bb-long.ogg':
       'audio/bb-long.mp3';
         audio.loop = true;
         audio.play();
@@ -301,6 +301,6 @@ function render() {
     if (windVelocity < 0.0) {
         windVelocity = 0.0;
     }
-  
+
     requestAnimFrame(render);
 }
