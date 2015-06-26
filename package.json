@@ -1,0 +1,31 @@
+{
+  "name": "breaking-badify",
+  "version": "0.0.0",
+  "description": "Breaking Badify something!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nihey/breaking-badify.git"
+  },
+  "keywords": [
+    "breaking",
+    "bad",
+    "periodic",
+    "table"
+  ],
+  "contributors": [
+    "Bruno Orlandi <brorlandi@gmail.com>",
+    "Nihey Luz Takizawa <nihey.takizawa@gmail.com> (http://nihey.com.br)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nihey/breaking-badify/issues"
+  },
+  "homepage": "https://github.com/nihey/breaking-badify",
+  "dependencies": {
+    "periodic-table": "0.0.1"
+  }
+}
