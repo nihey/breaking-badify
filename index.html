@@ -1,21 +1,7 @@
-<!--
-  Breaking Bad
-
-  A tribute to the best fucking series in the world.
-
-  Just some CSS and SVG. I created the SVG from the original Logo with
-  Photoshop (path) and Illustrator (SVG).
-
-  The original Logo is © by American Movie Classics Company LLC.
-
-
-  2012 by Tim Pietrusky
-  timpietrusky.com
--->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Breaking Bad-Fy Me</title>
+    <title>Breaking Badify</title>
     <meta property="og:site_name" content="Breaking Badify"/>
     <meta property="og:title" content="Breaking Badify"/>
     <meta property="og:description" content="Breaking Badify"/>
@@ -23,90 +9,93 @@
     <meta property="fb:app_id" content="500060916781954"/>
     <meta property="og:type" content="website"/>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="assets/image/favicon.ico" rel="icon" type="image/x-icon" />
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/modernizr.custom.98761.js"></script>
-
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-47214426-1', 'nihas.net');
-      ga('send', 'pageview');
-    </script>
-
+    <link rel="stylesheet" href="vendor/tim-pietrusky/style.css">
   </head>
   <body>
-    <!-- Facebook SDK-->
-    <div id="fb-root"></div>
-    <script>
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=500060916781954";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <div class="container" id="input-group">
-      <div style="float: left; width: 180px">
-        <div id="input-group-collapsible" class="collapsible" style="height: 200px;">
-          <input type="text" id="input-first-name" value="Breaking"><br>
-          <input type="text" id="input-last-name" value="Bad"><br>
-          <a href="#" class="breakingbadbutton" id="input-generate" style="margin-top:10px;margin-bottom:10px;">Breaking Bad-Fy Me</a>
-          <!-- Twitter Button-->
-          <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Breaking Bad-fy Me! nihas.net/BreakingBadfyMe" data-url="nihas.net/BreakingBadfyMe" data-counturl="nihas.net/BreakingBadfyMe" ></a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          <br>
-          <!-- Facebook Buttons-->
-
-          <div style="margin-top:10px;" class="fb-share-button" data-href="http://nihas.net/BreakingBadfyMe" data-type="button"></div>
-        </div>
-        <button id="input-collapse" style="width: 169px;">Close</button><br>
-        <div style="margin-top:10px;" class="fb-like" data-href="http://nihas.net/BreakingBadfyMe" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-      </div>
-    </div>
-
-    <div id="bb-body" style="display: none">
+    <div class="wrapper">
       <section id="breakingbad">
-        <div id="bb-name" class="wrapper"></div>
-        <div class="wrapper2">
-          <canvas id="smoke"></canvas>
-        </div>
+        <span class="chemical-element">
+          Br
+          <div class="desc" role="top-left">79.904</div>
+          <div class="desc" role="top-right">
+            -1
+            +1
+            +5
+          </div>
+          <div class="desc big" role="bottom-left-1">35</div>
+          <div class="desc" role="bottom-left-2">2-8-18-7</div>
+        </span>
+        <span class="title-1">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="309px" height="110px" viewBox="-7.328 -8.539 309 110" enable-background="new -7.328 -8.539 309 110" xml:space="preserve">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M234.672,83.211c1.315-3.006,4.31-4.078,5-4.25 c2-0.5-5,7.625,4,13.875C246.939,95.105,231.071,91.442,234.672,83.211z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M239.547,58.836c-1.689,0.422-4.875,3.5-3.25,9.125c0.646,2.237,3.795,3.512,6.345,4.617c1.575,0.682,2.558,1.774,3.879,2.201c1.694,0.547,3.702,0.403,5.651,1.182c3.125,1.25,17-3.375,24.75-0.875s10.125,11.875-1.375,14.125s-26,2.125-24.375,3.25s14.875,2.75,23.375-0.125s10.75-2.5,13.25-10.375s-9.625-13-23.125-11.75s-22.25-0.75-22.25-2.375c0,3.01-0.796-0.809-1.287-4.438C240.804,60.949,241.36,58.383,239.547,58.836z"/>
+            <g>
+              <g>
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M281.297,30.461c0-1.5-11.625-6.125-14.875-7.125c-2.4-0.738-21.808-3.803-27.125,10c-6.5,16.875,10.398,26.224,11.375,27.125c1.625,1.5,8.5,2.375,14.125,0.75s12.5-9.125,15.125-12S281.297,31.961,281.297,30.461z M272.214,47.756c-0.713,4.616-4.275,7.217-7.917,8.08c-4.355,1.032-7.909,1.136-11.021-2.343c-4.526-5.062-3.002-18.75,6.753-19.821c7.16-0.786,9.268,3.681,12.143,6.789C273.6,42.004,272.496,45.934,272.214,47.756z"/>
+              </g>
+            </g>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M248.172,29.711c-1.362,0.545,14.754-13.052,23.875,2.5C269.023,27.055,249.813,29.054,248.172,29.711z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M277.922,26.586c-0.91,0,5.75-3.875,10.75,0.875c4.649,4.417,0.143,8.5-0.875,8.5c-3,0-7-0.125-1.625-7.25C289.032,24.919,277.895,26.586,277.922,26.586z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M180.672,71.336c1.031-0.75,3.625-3.625,4.625-5s-0.125-34.875-0.875-35.75s0-5.875-1.125-6s-3.125-0.375-2.875-1.125s8.5-1.75,9.875,1.125s3.25,3.125,4.125,2.875s2.375,4.625,1.375,5.5s2.625,1.125,5-1.5s8.375-4.625,15.875-5.375c6.441-0.644-6.66-3.593-8.375-3.25c-1.875,0.375,3.25-3.125,10.75-0.75s9.375,8.5,9.625,13.375c0.249,4.848,0.017,29.298,1.25,32.875c1.25,3.625,3.125,3,3.75,3.375s-13.625,0.75-14.625,0.25s2.625-2.125,4.125-4.375s-2.375-3.125-7.25-3.875c-0.378-0.058-1.122-33.775-1.5-30.75c0.125-1-6-6.5-17.5,6.5c-1.037,1.172,0.162,25.411-1.625,24.875c-1.25-0.375-5.375,1.25-3.75,3.625s5.625,3.5,4.5,3.75S179.297,72.336,180.672,71.336z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M160.672,70.461c1.25-0.375,2.25-0.25,2.125-4.25s0.25-30.625,0.5-31.625s1.625-0.75,2.375-1.75s0-5.125-1-5.5s-5.75-2.625-6.25-3.5s5-4.625,9.625-3.75c3.078,0.583,7.875,1.625,4,7.875c-2.15,3.469,1.827,34.449,0,39.625c-0.75,2.125,2.125,3.125,2.875,4.125c0.645,0.86-13.007,1.008-14,0.125C160.778,71.708,160.107,70.63,160.672,70.461z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M167.547,7.586c2.535-0.4,5.675-3.839,2.125-6.375c-4.035-2.882-6.007,0.215-6.5,0.75C161.122,4.182,164.722,8.032,167.547,7.586z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M100.672,71.336c-0.952,0,4.5-3.875,5-5.5s-0.5-60.75-0.5-60.75s-2.375-3.5-4.75-3.625s8.125-2.875,10.125,0.5s0.125,10,0.75,9.625s4.375,3,5,2.75s0.5,26.375,0.375,26.75s1.5,4.875,1.25,5.625s20.375-17.25,20.75-18.375s-1-2.625-4.125-4.625s16.25-2,18.625,0.875c0.14,0.169-7.432,3.081-6.875,4.75c0.125,0.375,0.75,2.75-0.75,2.75s-14.375,13.5-14.625,14.5s21.125,25.125,24.25,24.5c1.89-0.378-11.431,2.461-17.875,0.5c-2.875-0.875,4.625-3,3.875-4s-16.875-16.625-20.25-18.25s-4,3.125-4.75,3.625s1,11-0.375,11.375s-4.75,2.5-3.75,2.625 s0.75,3.375,3.875,4.625C119.88,73.169,103.463,71.336,100.672,71.336z"/>
+            <g>
+              <g>
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M91.679,69.193c0.218-0.296-0.156-27.612-0.072-27.905c2.628-9.174-4.629-22.5-16.935-20.411c-3.036,0.516,6.358,2.869,7.721,3.457c3.471,1.497,4.934,4.976,3.279,5.46c-4.03,1.179-6.902-0.563-7.417-1c-0.799-0.679-14.84-0.877-15.333,0.333c0.01-0.024-3.955,1.886-5.167,0.5c-0.301-0.343-1.283-3.212-1.583-3.083c-1.682,0.721-6,11.5,2.417,11.417c7.517-0.074-1.568-4.709,15.917-5.5c6.846-0.31,7.442,5.796,7.302,7.107c-0.342,3.192-2.755,4.375-6.135,4.143c-6.083-0.417-22.167,3.417-25.667,11.917c-3.39,8.231,8.167,19.991,13.917,17.167c2.913-1.431-3.357-0.902-3.083-5.083c0.089-1.359,3.64-0.825,6.578-1.133c3.157-0.332,5.736-1.469,6.422-1.95c3.917-2.75,9.333-4,11.25-0.917c1.337,2.15,6.636,9.822,8.833,9.333C95.675,72.655,91.963,69.342,91.679,69.193z M80.755,56.877c-3.333,4.25-10.667,4.583-14,4.833c-3.333,0.25-8.083-1.167-6.333-5.667s13.45-9.873,19.167-8.833C81.527,47.563,80.4,57.331,80.755,56.877z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path fill="#fff" d="M46.088,45.377c-0.833-27.333-22.667-23.667-26.917-23.167s-19.5,2.5-19.167,27.667c0.333,25.167,23,24,22.417,23.833C20.066,73.038,6.05,64.78,10.505,62.127c0.965-0.574,10.617,2.468,11.809,2.718c8.407,1.765,17.338-1.1,17.607-1.885c-0.351,1.02-5.816,8.564-6.917,8.917c11.641-3.732,13.5-13.833,9.25-14.833s-4.75,1-14.583,3.75c-8.896,2.487-18.104-10.349-15.333-13.75C14.527,44.358,46.122,46.48,46.088,45.377z M24.838,22.877c7.75,0.25,6.917,1.583,0.5,3c-6.417,1.417-10.75,0.167-11.417,0.417C12.342,26.887,17.088,22.627,24.838,22.877z M13.672,40.377c0.684-0.214,0.667-9.583,11.5-9.75c9.755-0.15,9.824,9.594,9.417,10.083C34.172,41.211,12.338,40.794,13.672,40.377z"/>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <br>
+        <span class="chemical-element">
+          Ba
+          <div class="desc" role="top-left">137.33</div>
+          <div class="desc" role="top-right">+2</div>
+          <div class="desc medium" role="bottom-left-1">56</div>
+          <div class="desc" role="bottom-left-2">2-8-18-7</div>
+        </span>
+        <span class="title-2">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="63px" height="91px" viewBox="-6.379 -7.374 63 91" enable-background="new -6.379 -7.374 63 91" xml:space="preserve">
+            <g>
+              <g>
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M48.455,71.626c-0.167-2.333-2.333-66.5-1.167-69c1.851-3.966-15.406-2.701-11.5-1c10.333,4.5,8.333,10,7.5,11.833c-0.833,1.833-6,1.333-5.333,2.833c0.667,1.5,0.667,18.5-1.333,19c-3.996,0.999-0.838-2.276-12.833-5.667c-8.569-2.422-13.6,1.171-17.367,4.968c-3.713,3.743-5.559,7.84-5.133,7.698c-1.523,0.508-6.476,33.714,22.667,35.333c5.335,0.296,9.349-3.76,7.667-4c0.636,0.091-11.414,3.298-14.5,1c-7.758-5.777-5.298-10.445-5.167-9.833c0.5,2.333,8.167,5.333,13.5,4.167c5.121-1.121,9.545-7.824,12.833-7.167c0.833,0.167,0.667,5,0.5,6c-0.167,1,2.833-0.333,4.167,0.5c1.333,0.833,0.5,2.667,1,5.333s7.5,1.5,8,0.667C52.455,73.46,48.621,73.96,48.455,71.626z M37.455,47.793c-0.5,3.667-1.833,14.167-13,15.833c-11.725,1.75-10.442-13.694-10.5-13.5c0.454-1.515-3.167-14.167,11.333-15.333C31.25,34.313,38.048,43.439,37.455,47.793z"/>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <canvas id="smoke"></canvas>
       </section>
-
-      <audio></audio>
-      <div id="player">
-        <svg role="playing" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" width="40px" height="40px" viewBox="0 0 75 75"><g>
-          <g>
-            <polygon points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"/>
-            <path d="M 48.128,49.03 C 50.057,45.934 51.19,42.291 51.19,38.377 C 51.19,34.399 50.026,30.703 48.043,27.577" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
-            <path d="M 55.082,20.537 C 58.777,25.523 60.966,31.694 60.966,38.377 C 60.966,44.998 58.815,51.115 55.178,56.076" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
-            <path d="M 61.71,62.611 C 66.977,55.945 70.128,47.531 70.128,38.378 C 70.128,29.161 66.936,20.696 61.609,14.01" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
-          </g>
-        </svg>
-        <svg role="paused" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" id="layer1" width="40px" height="40px" viewBox="0 0 75 75">
-          <g>
-            <polygon points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"/>
-            <path d="M 48.651772,50.269646 69.395223,25.971024" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
-            <path d="M 69.395223,50.269646 48.651772,25.971024" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
-          </g>
-        </svg>
-      </div>
     </div>
+    <!-- /Breaking Bad Logo -->
 
-    <div id="elementsName"></div>
-
-    <div id="footer">
-      Developed by Bruno Orlandi and Nihey Takizawa. Credits to Tim Pietrusky and Ed Welch. 2014.
+    <!-- Breaking Bad theme -->
+    <audio></audio>
+    <div id="player">
+      <svg role="paused" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" id="layer1" width="40px" height="40px" viewBox="0 0 75 75">
+        <g>
+          <polygon points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;" />
+          <path d="M 48.651772,50.269646 69.395223,25.971024" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
+          <path d="M 69.395223,50.269646 48.651772,25.971024" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
+        </g>
+      </svg>
+      <svg role="playing" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" width="40px" height="40px" viewBox="0 0 75 75">
+        <g>
+          <polygon points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"/>
+          <path d="M 48.128,49.03 C 50.057,45.934 51.19,42.291 51.19,38.377 C 51.19,34.399 50.026,30.703 48.043,27.577" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+          <path d="M 55.082,20.537 C 58.777,25.523 60.966,31.694 60.966,38.377 C 60.966,44.998 58.815,51.115 55.178,56.076" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+          <path d="M 61.71,62.611 C 66.977,55.945 70.128,47.531 70.128,38.378 C 70.128,29.161 66.936,20.696 61.609,14.01" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+        </g>
+      </svg>
     </div>
-
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/periodicTable.js"></script>
-    <script type="text/javascript" src="js/maker.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="vendor/tim-pietrusky/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,210 @@
+/**
+ *
+ * Absolute position in the center of the parent element (top, left).
+ *
+ */
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+/**
+ *
+ * Absolute position in the center of the parent element (-50%, -50%).
+ *
+ */
+.wrapper {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/**
+ *
+ * Absolute position at $top and $left.
+ * You can also add value for the $content property.
+ *
+ */
+/**
+ *
+ * Include a breakpoint for different screen sizses:
+ *
+ * small : smart phones & smaller devices
+ * medium :  tablets, netbooks
+ * large : HD, large screens, beamer
+ *
+ */
+/**
+ *
+ * Linear gradient with old and new syntax.
+ * bg(to bottom, top, #f00, #00f)
+ *
+ */
+/**
+ *
+ * Animation
+ *
+ */
+/**
+ *
+ * Keyframes
+ *
+ */
+/**
+ *
+ * Placeholder
+ *
+ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background: #090f05;
+  overflow: hidden;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+/**
+ *
+ * Absolute position in the center of the parent element (-50%, -50%).
+ *
+ */
+.wrapper {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#breakingbad {
+  position: relative;
+  width: 530px;
+  border: 0.5em solid rgba(255, 255, 255, 0.1);
+  padding: 1em;
+  overflow: hidden;
+}
+#breakingbad:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1337;
+  background: #15220c;
+}
+
+span {
+  color: #fff;
+}
+
+.chemical-element {
+  width: 165px;
+  height: 165px;
+  position: relative;
+  font: bold 95px Arial;
+  color: #fafffb;
+  padding: 25px 25px 25px 30px;
+  border: 3px solid #DDFFE2;
+  display: inline-block;
+  background: linear-gradient(-45deg, #5cbe73 1%, #182b04 100%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.chemical-element:nth-child(4) {
+  margin-left: 165px;
+  padding-left: 23px;
+}
+
+.desc {
+  position: absolute;
+  font: bold 13px Arial;
+  color: rgba(244, 247, 245, 0.95);
+}
+
+.big {
+  font: bold 20px Arial;
+}
+
+.medium {
+  font: bold 17px Arial;
+}
+
+div[role="top-left"] {
+  top: 8px;
+  left: 10px;
+}
+
+div[role="top-right"] {
+  top: 8px;
+  right: 5px;
+  text-align: right;
+  width: 25px;
+}
+
+div[role="bottom-left-1"] {
+  bottom: 20px;
+  left: 5px;
+  text-align: left;
+}
+
+div[role="bottom-left-2"] {
+  bottom: 5px;
+  left: 5px;
+  text-align: left;
+}
+
+.title-1,
+.title-2 {
+  width: 50px;
+  display: inline-block;
+  height: 130px;
+  vertical-align: bottom;
+}
+
+.title-2 {
+  height: 134px;
+}
+
+#smoke {
+  position: absolute;
+  z-index: -1;
+  left: 22%;
+  top: 0;
+}
+
+audio {
+  display: none;
+}
+
+#player {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  transition: all .3s ease-in;
+  opacity: .1;
+  cursor: pointer;
+}
+
+#player:hover {
+  opacity: 1;
+}
+
+#player svg[role="playing"] {
+  display: none;
+}
