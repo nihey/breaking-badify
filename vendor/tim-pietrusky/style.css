@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'cooper';
+  src: url('fonts/cooper.ttf');
+}
+
 /**
  *
  * Absolute position in the center of the parent element (top, left).
@@ -173,8 +178,10 @@ div[role="bottom-left-2"] {
 .title-2 {
   width: 50px;
   display: inline-block;
-  height: 130px;
+  height: 135px;
   vertical-align: bottom;
+  font: bold 88px cooper;
+  letter-spacing: 3px;
 }
 
 .title-2 {
