@@ -27,6 +27,7 @@
   "homepage": "https://github.com/nihey/breaking-badify",
   "dependencies": {
     "font-awesome": "^4.3.0",
-    "periodic-table": "0.0.1"
+    "periodic-table": "0.0.1",
+    "webpack": "^1.10.0"
   }
 }
