@@ -9,3 +9,18 @@ $('#button-collapse').click(function() {
     $('#button-collapse').removeClass('fa-plus-circle');
   });
 });
+
+$('#form-badify').submit(function(event) {
+  event.preventDefault();
+  location.hash = '!/' + encodeURIComponent($('#word-1').val()) + '/' +
+                  encodeURIComponent($('#word-2').val());
+});
+
+$(window).on('hashchange', function() {
+  var [first, second] = location.hash.replace('#!/', '').split('/');
+  first = decodeURIComponent(first);
+  second = decodeURIComponent(second);
+  console.log(first, second);
+});
+
+window.dispatchEvent(new Event('hashchange'));

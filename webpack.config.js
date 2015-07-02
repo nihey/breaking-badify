@@ -9,9 +9,16 @@ module.exports = {
     'vendor': './js/vendor.js',
   },
 
+  module: {
+    loaders: [
+      { test: /\.json$/, loader: 'json-loader'},
+      { test: /\.js$/, exclude: /node_modules\//, loader: 'babel-loader'},
+    ],
+  },
+
   resolve: {
     root: path.join(__dirname, 'js'),
-    extensions: ['', '.js'],
+    extensions: ['', '.js', '.json'],
   },
 
   output: {
