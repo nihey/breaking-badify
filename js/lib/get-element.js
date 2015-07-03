@@ -7,7 +7,7 @@ module.exports = function(string) {
   var symbol = findSymbol(string) || {
     index: 0,
     element: $.extend({}, periodicTable.elements.Hydrogen, {
-      symbol: string.substring(0, 2),
+      symbol: string.charAt(0).toUpperCase(),
       name: 'Nothing',
     }),
   };
