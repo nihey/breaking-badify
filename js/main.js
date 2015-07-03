@@ -90,6 +90,10 @@ $(window).on('hashchange', function() {
   var padding = parseInt($('#breakingbad').css('padding-left').replace('px', ''));
   padding *= 2;
   $('#breakingbad').width(maxRight - minLeft + padding);
+
+  // Dirty hack to show the results only everything is good-looking on the
+  // first run
+  $('#breakingbad').css({opacity: 100});
 });
 
 $(document).ready(function() {
