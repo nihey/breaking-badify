@@ -28,14 +28,14 @@ var audio = $('audio').get(0),
     _playing = $('svg[role="playing"]');
 
 audio.src = Modernizr.audio.ogg ?
-  'assets/audio/breaking_bad_intro.ogg':
-  'assets/audio/breaking_bad_intro.mp3';
+  require('../../assets/audio/breaking_bad_intro.ogg'):
+  require('../../assets/audio/breaking_bad_intro.mp3');
 var ended = false;
 audio.addEventListener('ended',function(){
     if(ended === false){
         audio.src = Modernizr.audio.ogg ?
-      'assets/audio/bb-long.ogg':
-      'assets/audio/bb-long.mp3';
+      require('../../assets/audio/bb-long.ogg'):
+      require('../../assets/audio/bb-long.mp3');
         audio.loop = true;
         audio.play();
     }
@@ -107,9 +107,9 @@ function init() {
         img_smoke_2 = new Image(),
         img_smoke_3 = new Image();
 
-    img_smoke_1.src = 'assets/image/smoke_1.png';
-    img_smoke_2.src = 'assets/image/smoke_2.png';
-    img_smoke_3.src = 'assets/image/smoke_3.png';
+    img_smoke_1.src = require('../../assets/image/smoke_1.png');
+    img_smoke_2.src = require('../../assets/image/smoke_2.png');
+    img_smoke_3.src = require('../../assets/image/smoke_3.png');
 
     smoke_1.m_alpha = 0.2;
     smoke_3.m_speed = 0.001;
