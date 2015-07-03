@@ -131,11 +131,6 @@ span {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
-.chemical-element:nth-child(4) {
-  margin-left: 165px;
-  padding-left: 23px;
-}
-
 .desc {
   position: absolute;
   font: bold 13px Arial;
@@ -176,16 +171,11 @@ div[role="bottom-left-2"] {
 
 .title-1,
 .title-2 {
-  width: 50px;
   display: inline-block;
   height: 135px;
   vertical-align: bottom;
   font: bold 88px cooper;
   letter-spacing: 3px;
-}
-
-.title-2 {
-  height: 134px;
 }
 
 #smoke {
