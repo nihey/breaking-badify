@@ -1,0 +1,24 @@
+{
+  "name": "breaking-bad-name",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nihey/breaking-badify",
+  "authors": [
+    "Nihey Takizawa <nihey.takizawa@gmail.com>",
+    "Bruno Orlandi <brorlandi@gmail.com>"
+  ],
+  "keywords": [
+    "breaking",
+    "badify"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3"
+  }
+}
