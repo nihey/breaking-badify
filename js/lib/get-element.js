@@ -3,11 +3,11 @@ var periodicTable = require('periodic-table'),
 
 module.exports = function(string) {
   // Find the symbol related to the string, or create a non-existing one
-  string = string.toLowerCase();
-  var symbol = findSymbol(string) || {
+  var searchString = string.toLowerCase();
+  var symbol = findSymbol(searchString) || {
     index: 0,
     element: $.extend({}, periodicTable.elements.Hydrogen, {
-      symbol: string.charAt(0).toUpperCase(),
+      symbol: searchString.charAt(0).toUpperCase(),
       name: 'Nothing',
     }),
   };
