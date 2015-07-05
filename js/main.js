@@ -98,4 +98,10 @@ $(window).on('hashchange', function() {
 
 $(document).ready(function() {
   window.dispatchEvent(new Event('hashchange'));
+
+  // Automatically add target attribute to all links so that they open on
+  // another tab
+  $('a').each(function(index) {
+    $(this).attr('target', index);
+  });
 });
