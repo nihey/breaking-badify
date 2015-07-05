@@ -11,3 +11,4 @@ dist/
 
 !dist/index.html
 !dist/favicon.ico
+!dist/logo.png
