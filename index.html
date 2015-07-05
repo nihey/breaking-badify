@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Breaking Badify</title>
+    <meta charset="utf-8"/>
+    <meta property="og:site_name" content="Breaking Badify"/>
+    <meta property="og:title" content="Breaking Badify"/>
+    <meta property="og:description" content="Breaking Badify"/>
+    <meta property="og:image" content="logo.png"/>
+    <meta property="fb:app_id" content="500060916781954"/>
+    <meta property="og:type" content="website"/>
+
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <form id="form-badify" class="input-dropdown">
+      <div id="collapse-box">
+        <input id="word-1" type="text" value="Breaking" required>
+        <input id="word-2" type="text" value="Bad" required>
+        <button type="submit">badify</button>
+      </div>
+      <i id="button-collapse" class="fa fa-minus-circle"></i>
+    </form>
+    <div class="wrapper">
+      <section id="breakingbad" style="opacity: 0;">
+        <span class="title-1 line-1" data-placing="1"></span>
+        <span class="chemical-element" data-line="1">
+          <div class="line-1" data-placing="2">Br</div>
+          <div class="desc" role="top-left">79.904</div>
+          <div class="desc" role="top-right">
+            -1
+            +1
+            +5
+          </div>
+          <div class="desc big" role="bottom-left-1">35</div>
+          <div class="desc" role="bottom-left-2">2-8-18-7</div>
+        </span>
+        <span class="title-1 line-1" data-placing="3">
+          eaking
+        </span>
+        <br>
+        <span class="title-2 line-2" data-placing="1" style="margin-left: 165px"></span>
+        <span class="chemical-element" data-line="2">
+          <div class="line-2" data-placing="2">Ba</div>
+          <div class="desc" role="top-left">137.33</div>
+          <div class="desc" role="top-right">+2</div>
+          <div class="desc medium" role="bottom-left-1">56</div>
+          <div class="desc" role="bottom-left-2">2-8-18-7</div>
+        </span>
+        <span class="title-2 line-2" data-placing="3">
+          d
+        </span>
+        <canvas id="smoke"></canvas>
+      </section>
+      <div class="selected-elements">
+        You got <span id="element-1">Bromine</span> and
+        <span id="element-2">Barium</span>
+      </div>
+    </div>
+    <!-- /Breaking Bad Logo -->
+
+    <!-- Breaking Bad theme -->
+    <audio></audio>
+    <div id="player">
+      <svg role="paused" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" id="layer1" width="40px" height="40px" viewBox="0 0 75 75">
+        <g>
+          <polygon points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;" />
+          <path d="M 48.651772,50.269646 69.395223,25.971024" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
+          <path d="M 69.395223,50.269646 48.651772,25.971024" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
+        </g>
+      </svg>
+      <svg role="playing" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.0" width="40px" height="40px" viewBox="0 0 75 75">
+        <g>
+          <polygon points="39.389,13.769 22.235,28.606 6,28.606 6,47.699 21.989,47.699 39.389,62.75 39.389,13.769" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"/>
+          <path d="M 48.128,49.03 C 50.057,45.934 51.19,42.291 51.19,38.377 C 51.19,34.399 50.026,30.703 48.043,27.577" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+          <path d="M 55.082,20.537 C 58.777,25.523 60.966,31.694 60.966,38.377 C 60.966,44.998 58.815,51.115 55.178,56.076" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+          <path d="M 61.71,62.611 C 66.977,55.945 70.128,47.531 70.128,38.378 C 70.128,29.161 66.936,20.696 61.609,14.01" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"/>
+        </g>
+      </svg>
+    </div>
+    <div class="footer">
+      Developed by <a href="https://github.com/BrOrlandi">Bruno Orlandi</a>
+      and <a href="https://github.com/nihey">Nihey Takizawa</a>, using the
+      <a href="http://timpietrusky.com/breaking-bad-logo">CodePen</a> provided
+      by <a href="http://timpietrusky.com/">Tim Pietrusky</a>
+    </div>
+    <div class="fork-me">
+      <a href="https://github.com/nihey/breaking-badify">
+        <i class="fa fa-github"></i>
+      </a>
+    </div>
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
