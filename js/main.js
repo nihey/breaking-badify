@@ -62,8 +62,11 @@ $(window).on('hashchange', function() {
   $('#word-1').val(first);
   $('#word-2').val(second);
 
-  replaceElement(getElement(first), 1);
-  replaceElement(getElement(second), 2);
+  var [firstElement, secondElement] = [getElement(first), getElement(second)];
+  replaceElement(firstElement, 1);
+  replaceElement(secondElement, 2);
+  $('#element-1').text(firstElement.element.name);
+  $('#element-2').text(secondElement.element.name);
   $('.line-1[data-placing=1]').css({'margin-left': '0'});
   $('.line-2[data-placing=1]').css({'margin-left': '0'});
 
