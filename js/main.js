@@ -1,4 +1,5 @@
 var getElement = require('lib/get-element');
+var electronPerShell = require('lib/electron-per-shell');
 
 function getString(element) {
   if (element.constructor === Array) {
@@ -23,7 +24,7 @@ function replaceElement(data, line) {
   domElement.find('[role=top-left]').text(atomicMass);
   domElement.find('[role=bottom-left-1]').text(data.element.atomicNumber);
   var electronicConfiguration = data.element.electronicConfiguration;
-  domElement.find('[role=bottom-left-2]').text(electronicConfiguration);
+  domElement.find('[role=bottom-left-2]').text(electronPerShell(data.element));
 
   var oxidationStates = '';
   getString(data.element.oxidationStates).split(',').forEach(function(state) {
