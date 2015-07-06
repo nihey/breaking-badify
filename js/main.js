@@ -1,6 +1,8 @@
 var getElement = require('lib/get-element');
 var electronPerShell = require('lib/electron-per-shell');
 
+const WIKIPEDIA_BASE = 'https://en.wikipedia.org/wiki/';
+
 function getString(element) {
   if (element.constructor === Array) {
     return element[0].toString();
@@ -67,7 +69,9 @@ $(window).on('hashchange', function() {
   replaceElement(firstElement, 1);
   replaceElement(secondElement, 2);
   $('#element-1').text(firstElement.element.name);
+  $('#element-1').attr('href', WIKIPEDIA_BASE + firstElement.element.name);
   $('#element-2').text(secondElement.element.name);
+  $('#element-2').attr('href', WIKIPEDIA_BASE + secondElement.element.name);
   $('.line-1[data-placing=1]').css({'margin-left': '0'});
   $('.line-2[data-placing=1]').css({'margin-left': '0'});
 
