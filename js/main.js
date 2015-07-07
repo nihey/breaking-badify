@@ -1,5 +1,6 @@
 var getElement = require('lib/get-element');
 var electronPerShell = require('lib/electron-per-shell');
+var sendFirebase = require('lib/send-firebase');
 $.fn.flash = require('lib/flash');
 
 const WIKIPEDIA_BASE = 'https://en.wikipedia.org/wiki/';
@@ -103,6 +104,7 @@ $(window).on('hashchange', function() {
   // Dirty hack to show the results only everything is good-looking on the
   // first run
   $('#breakingbad').css({opacity: 100});
+  sendFirebase(first, second);
 });
 
 $(document).ready(function() {

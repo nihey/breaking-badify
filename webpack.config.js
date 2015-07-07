@@ -31,6 +31,11 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('[name].css'),
+    new webpack.DefinePlugin({
+      Config: JSON.stringify({
+        FIREBASE_URL: 'https://badify.firebaseio.com',
+      }),
+    }),
   ],
 
   resolve: {
