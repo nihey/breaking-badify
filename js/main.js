@@ -1,5 +1,6 @@
 var getElement = require('lib/get-element');
 var electronPerShell = require('lib/electron-per-shell');
+$.fn.flash = require('lib/flash');
 
 const WIKIPEDIA_BASE = 'https://en.wikipedia.org/wiki/';
 
@@ -106,6 +107,9 @@ $(window).on('hashchange', function() {
 
 $(document).ready(function() {
   window.dispatchEvent(new Event('hashchange'));
+  // Makes the player flash, so that it becomes evident for the user that it is
+  // possible to enable audio
+  $('#player').flash({interval: 500, iterations: 2});
 
   // Automatically add target attribute to all links so that they open on
   // another tab
