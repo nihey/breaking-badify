@@ -1,6 +1,6 @@
 {
   "name": "breaking-badify",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Breaking Badify something!",
   "main": "index.js",
   "scripts": {
