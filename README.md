@@ -3,6 +3,8 @@
 A tribute to [Breaking Bad][breaking_bad_link] series, badify any two strings
 [here][app_link].
 
+[![dependencies](https://david-dm.org/nihey/breaking-badify.png)](https://david-dm.org/nihey/breaking-badify)
+
 # Building
 
 It is recommended to have the [`webpack`][webpack_link] module installed and up to date:
