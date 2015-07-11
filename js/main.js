@@ -12,12 +12,6 @@ function getString(element) {
   return element.toString() || '';
 }
 
-function lineWidth(line) {
-  return $(`.line-${line}[data-placing=1]`).outerWidth() +
-         $(`.chemical-element[data-line=${line}]`).outerWidth() +
-         $(`.line-${line}[data-placing=3]`).outerWidth();
-}
-
 function replaceElement(data, line) {
   $(`.line-${line}[data-placing=1]`).text(data.string[0]);
   $(`.line-${line}[data-placing=2]`).text(data.string[1]);
