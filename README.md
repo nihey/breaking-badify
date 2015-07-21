@@ -3,6 +3,7 @@
 A tribute to [Breaking Bad][breaking_bad_link] series, badify any two strings
 [here][app_link].
 
+[![build](https://travis-ci.org/nihey/breaking-badify.svg?branch=master)](https://travis-ci.org/nihey/breaking-badify)
 [![dependencies](https://david-dm.org/nihey/breaking-badify.png)](https://david-dm.org/nihey/breaking-badify)
 
 # Building
