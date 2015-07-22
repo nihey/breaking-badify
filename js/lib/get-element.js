@@ -19,5 +19,5 @@ module.exports = function(string) {
       symbol.element.symbol,
       string.substring(symbol.index + symbol.element.symbol.length),
     ],
-  }
-}
+  };
+};

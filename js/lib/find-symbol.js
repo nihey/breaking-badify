@@ -32,4 +32,4 @@ module.exports = function(string) {
     index: string.indexOf(foundSymbol.toLowerCase()),
     element: periodicTable.symbols[foundSymbol],
   };
-}
+};

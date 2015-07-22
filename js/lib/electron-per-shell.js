@@ -2,7 +2,7 @@ var periodicTable = require('periodic-table');
 
 /* Return a array with 9 zeroed elements */
 function getEmptyLevels() {
-  return '123456789'.split('').map(function(){return 0});
+  return '123456789'.split('').map(function(){return 0;});
 }
 
 /** Return the number of electrons on each atom shell
