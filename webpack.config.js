@@ -1,15 +1,12 @@
 var webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    HtmlPlugin = require('./plugins/html-plugin'),
     path = require('path');
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 module.exports = {
-  devtool: 'source-map',
-
   entry: {
-    'app': './js/main.js',
-    'vendor': './js/vendor.js',
-    'styles': './styles/badify.less',
+    'script': './scripts/main.js',
+    'style': './styles/badify.less',
   },
 
   module: {
@@ -31,15 +28,14 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('[name].css'),
+    new HtmlPlugin('index.html'),
     new webpack.DefinePlugin({
-      Config: JSON.stringify({
-        FIREBASE_URL: 'https://badify.firebaseio.com',
-      }),
+      Environment: JSON.stringify(require('config')),
     }),
   ],
 
   resolve: {
-    root: path.join(__dirname, 'js'),
+    root: path.join(__dirname, 'scripts'),
     extensions: ['', '.js', '.json'],
   },
 

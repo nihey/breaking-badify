@@ -53,7 +53,13 @@ $('#form-badify').submit(function(event) {
                   encodeURIComponent($('#word-2').val());
 });
 
-$(window).on('hashchange', function() {
+let onHashChange = function() {
+  if (!Environment.DEBUG) {
+    // Only send Google Analytics data when running on production mode
+    ga('create', 'UA-64926367-1', 'auto');
+    ga('send', 'pageview');
+  }
+
   var [first, second] = location.hash.replace('#!/', '').split('/');
   first = decodeURIComponent(first || 'Breaking');
   second = decodeURIComponent(second || 'Bad');
@@ -99,10 +105,12 @@ $(window).on('hashchange', function() {
   // first run
   $('#breakingbad').css({opacity: 100});
   sendFirebase(first, second);
-});
+};
+window.onhashchange = onHashChange;
 
 $(document).ready(function() {
-  window.dispatchEvent(new Event('hashchange'));
+  onHashChange();
+
   // Makes the player flash, so that it becomes evident for the user that it is
   // possible to enable audio
   $('#player').flash({interval: 500, iterations: 2});

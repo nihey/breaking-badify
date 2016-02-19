@@ -46,3 +46,9 @@ If you feel something in this project could be improved, open an
 [app_link]: http://nihey.github.io/breaking-badify/
 [webpack_link]: http://webpack.github.io/
 [issue_link]: https://github.com/nihey/breaking-badify/issues
+
+<p align="center">
+  <a target="_blank" href="http://nihey.github.io">
+    <img style="width: 450px" src="https://raw.githubusercontent.com/nihey/breaking-badify/master/assets/image/logo.png"/>
+  </a>
+</p>

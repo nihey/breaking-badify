@@ -4,6 +4,11 @@ function encode(string) {
 
 /* Sends the first and second words to firebase */
 module.exports = function(first, second) {
+  if (Environment.DEBUG) {
+    // Do not send anything to firebase on debug mode
+    return;
+  }
+
   var url = Config.FIREBASE_URL + '/combinations/';
   url = url + encode(first) + ' ' + encode(second) + '.json';
   // Even though firebase is able to work with websocket, using the REST API is
