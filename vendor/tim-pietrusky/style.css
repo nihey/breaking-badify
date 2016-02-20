@@ -100,7 +100,7 @@ body {
 #breakingbad {
   position: relative;
   width: 530px;
-  border: 0.5em solid rgba(255, 255, 255, 0.1);
+  border: 0.5em solid #21271E;
   padding: 1em;
   overflow: hidden;
 }

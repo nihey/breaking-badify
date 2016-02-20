@@ -49,10 +49,20 @@ $('#button-collapse').click(function() {
 
 $('#download-button').click(function() {
   html2canvas($('#breakingbad')[0]).then(function(canvas) {
+    // Add missing border to the canvas
+    var kanvas = document.createElement('canvas');
+    kanvas.width = canvas.width;
+    kanvas.height = canvas.height;
+    var context = kanvas.getContext('2d');
+    context.fillStyle = '#21271E';
+    context.fillRect(0, 0, kanvas.width, kanvas.height);
+    kanvas.getContext('2d').drawImage(canvas, 0, 0);
+
+    // Download the image
     var [first='Breaking', second='Bad'] = location.hash.replace('#!/', '').split('/');
     var link = document.createElement('a');
     link.setAttribute('download', `${first} ${second}.png`);
-    link.href = canvas.toDataURL('image/png');
+    link.href = kanvas.toDataURL('image/png');
     link.click();
   });
 });
