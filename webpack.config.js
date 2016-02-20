@@ -5,6 +5,7 @@ var webpack = require('webpack'),
 
 module.exports = {
   entry: {
+    'vendor': './scripts/vendor.js',
     'script': './scripts/main.js',
     'style': './styles/badify.less',
   },
