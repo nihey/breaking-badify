@@ -1,6 +1,7 @@
 var getElement = require('lib/get-element');
 var electronPerShell = require('lib/electron-per-shell');
 var sendFirebase = require('lib/send-firebase');
+var html2canvas = require('html2canvas');
 $.fn.flash = require('lib/flash');
 
 const WIKIPEDIA_BASE = 'https://en.wikipedia.org/wiki/';
@@ -19,7 +20,7 @@ function replaceElement(data, line) {
 
   var domElement = $(`.chemical-element[data-line=${line}]`);
   var atomicMass = getString(data.element.atomicMass).replace(/\(.*$/, '');
-  domElement.find('[role=top-left]').text(atomicMass);
+  domElement.find('[role=top-left]').text(parseFloat(atomicMass).toFixed(3));
   domElement.find('[role=bottom-left-1]').text(data.element.atomicNumber);
   domElement.find('[role=bottom-left-2]').text(electronPerShell(data.element));
 
@@ -43,6 +44,16 @@ $('#button-collapse').click(function() {
     }
     $('#button-collapse').addClass('fa-minus-circle');
     $('#button-collapse').removeClass('fa-plus-circle');
+  });
+});
+
+$('#download-button').click(function() {
+  html2canvas($('#breakingbad')[0]).then(function(canvas) {
+    var [first='Breaking', second='Bad'] = location.hash.replace('#!/', '').split('/');
+    var link = document.createElement('a');
+    link.setAttribute('download', `${first} ${second}.png`);
+    link.href = canvas.toDataURL('image/png');
+    link.click();
   });
 });
 

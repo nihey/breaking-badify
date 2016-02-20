@@ -33,7 +33,7 @@
   color: #5d8640;
 }
 
-.input-dropdown button {
+.input-dropdown button, #download-button {
   cursor: pointer;
   margin: 3px 0 3px 0;
   padding: 0.3em;
@@ -43,14 +43,20 @@
   font-weight: bold;
 }
 
+#download-button {
+  margin-top: 23px !important;
+  background: #cdbf7b;
+}
+
 .input-dropdown button[type=submit] {
   width: 100%;
   background: #cdbf7b;
-  width: 100%;
 }
 
 .input-dropdown button[type=submit]:hover,
-.input-dropdown button[type=submit]:focus {
+.input-dropdown button[type=submit]:focus,
+#download-button:hover,
+#download-button:focus {
   background: #f9e379;
 }
 
