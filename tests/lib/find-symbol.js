@@ -1,5 +1,5 @@
 var periodicTable = require('periodic-table');
-var findSymbol = require('../../js/lib/find-symbol');
+var findSymbol = require('../../scripts/lib/find-symbol');
 
 describe('Symbol finding', function() {
   it('hydrogen', function() {

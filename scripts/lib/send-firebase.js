@@ -9,7 +9,7 @@ module.exports = function(first, second) {
     return;
   }
 
-  var url = Config.FIREBASE_URL + '/combinations/';
+  var url = Environment.FIREBASE_URL + '/combinations/';
   url = url + encode(first) + ' ' + encode(second) + '.json';
   // Even though firebase is able to work with websocket, using the REST API is
   // a cheaper alternative - as it will not maintain a persistent connection,

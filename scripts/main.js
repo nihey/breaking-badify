@@ -21,7 +21,6 @@ function replaceElement(data, line) {
   var atomicMass = getString(data.element.atomicMass).replace(/\(.*$/, '');
   domElement.find('[role=top-left]').text(atomicMass);
   domElement.find('[role=bottom-left-1]').text(data.element.atomicNumber);
-  var electronicConfiguration = data.element.electronicConfiguration;
   domElement.find('[role=bottom-left-2]').text(electronPerShell(data.element));
 
   var oxidationStates = '';

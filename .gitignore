@@ -8,7 +8,6 @@ bower_components/
 # Built files
 dist/
 
-
 !dist/index.html
 !dist/favicon.ico
 !dist/logo.png
